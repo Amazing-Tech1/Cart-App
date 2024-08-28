@@ -8,7 +8,7 @@ function footer() {
     return (
         <div className='footer'>
             <h4>Total Items: <span>${totalItem(cart)}</span></h4>
-        <h4>Total Price: <span>${totalPrice(cart)}</span> </h4>
+        <h4>Total Price: <span>${totalPrice(cart).toFixed(2)}</span> </h4>
         <button>Checkout</button>
         </div>
     )

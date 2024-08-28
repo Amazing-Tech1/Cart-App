@@ -10,7 +10,15 @@ const CartReducer = (state, action) => {
 
     switch (action.type) {
         case "Add":
-            return [...state, action.product]
+            const existingProduct = state.findIndex(product => product.id === action.product.id)
+            if (existingProduct !== -1) {
+                state[existingProduct].quantity += 1
+                return [...state]
+            }
+            else {
+                return [...state, action.product]
+            }
+
         case "Remove":
             return state.filter(p => p.id !== action.id)
         case "Increase":

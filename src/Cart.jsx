@@ -22,9 +22,16 @@ function Cart() {
       </div>
       {cart.length > 0 &&
         <div className='cartproduct'>
-          {cart.map(product => (
+          <div className="cart-details">
+            <p>Products</p>
+            <p>Name</p>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Remove</p>
+          </div>
+          {cart.map((product, index) => (
             <CartProduct product={product}
-              key={product.id}
+              key={index} isOdd={index % 2 !== 0}
             />
           ))
           }

@@ -5,16 +5,18 @@ function Product({ product }) {
     const { dispatch } = useContext(CartContext)
     return (
         <div className='productCard'>
+            <div className="productCard-img">
             <Link to={`product/${product.id}`}>
-                <img src={product.image} width="200px" height="182px " />
+                <img src={product.image} />
             </Link>
+            </div>
             <div className='product-attribute'>
-                <h2>{(product.title).length <= 40
+                <h2>{(product.title).length <= 30
                     ? product.title : `${(product.title).slice(0, 25)}...`}</h2>
                 <h3>${product.price}</h3>
-                <p className='cart-Link'
+                <button className='cart-Link'
                     onClick={() => dispatch({ type: "Add", product: product })}>
-                    Add to Cart</p>
+                    Add to Cart</button>
             </div>
         </div >
     )
