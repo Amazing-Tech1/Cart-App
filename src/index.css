@@ -150,20 +150,21 @@ body {
   padding: 2px;
   border-radius: 50%;
   width: max(1.5vw, 25px);
-  color: whitesmoke;
   border: none;
 }
 
 .cart-btn- {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.623);
+  color: whitesmoke;
 }
 
 .cart-btnq {
-  background-color: black;
+ color: black;
 }
 
 .cart-btnplus {
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.637);
+  color: whitesmoke;
 }
 
 .remove-btn {
