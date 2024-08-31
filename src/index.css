@@ -175,8 +175,9 @@ body {
 .cart-Link {
   text-decoration: none;
   margin: 5px;
-  width: 200px;
-  padding: 5px;
+  width: 80%;
+  padding: 7px;
+  font-size: 2rem;
   display: inline-block;
   border: 1px solid black;
   border-radius: 10px;
